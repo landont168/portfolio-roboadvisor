@@ -1,18 +1,39 @@
 # Portfolio Roboadvisor
-This is an algorithmic portfolio manager/advisor that—given a file with a list of stock tickers—will create a portfolio designed for risk-averse investors (i.e., it will optimize for the lowest possible returns).
 
-This was a project for the Computing and Financial Management program at the University of Waterloo. All groups' programs were tested on live stock data and compared against each other; this group came in third place in the program.
+This Python-based portfolio roboadvisor is designed to optimize a portfolio for risk-averse investors. It takes a CSV file containing a random list of stock tickers, processes the data, and generates a portfolio that balances risk and return using Monte Carlo simulations. For more details, feel free to explore the Jupyter Notebook.
 
-The process to create the portfolio is as follows:
-1. Stock data is filtered (any stocks that are delisted or don't meet certain requirements are removed).
-2. Candidate stocks are selected using statistical measures such as standard deviation, expected return, beta value, and correlation. Stock candidates are selected to ensure a low and stable expected return. Several candidate portfolios will be created using these candidate stocks, and later we will choose one of these portfolios as the final portfolio.
-3. Once we have the candidate portfolios, the stocks' weightings in each portfolio are optimized by creating about 2,000 random weighting variations per portfolio candidate.
-4. Finally, to choose which portfolio candidate we select as the final portfolio, we use a geometric approach in which the portfolio closest to the origin on a risk-return plane is picked. In other words, we optimize for both low expected returns and low standard deviation because these are both important in this project.
+This project was entered into a portfolio generation competition and was tested against live stock data, and ranked third among competing groups. The generated portfolio can be found [here on Yahoo Finance](https://yhoo.it/3Z6Gvv2).
 
-Below you can see an image of all random portfolios graphed on a risk-return plane. Each colour represents a different portfolio candidate, and the black dot is the optimal portfolio.
-![image](https://github.com/Zemelware/robo_stock_advisor/assets/61860124/c62db596-5dca-4f89-91e3-873035ddd352)
+## Technologies 🥞
 
-The final portfolio will look something like this:
+- Python (pandas, NumPy, Matplotlib)
+- Yahoo Finance API
+- Jupyter Notebook
+
+## Pipeline 🏭
+
+**1. Data Preprocessing**
+
+- Filtered out delisted, non-existent, and low-volume stock tickers
+- Fetched historical stock data using the Yahoo Finance API
+- Implemented ETL batch processing by separating Canadian-listed and US-listed stocks, improving data retrieval effiency
+- Converted US stock prices to Canadian dollars (CAD) to standardize data
+
+**2. Financial Analysis**
+
+- Calculated statistical measures using pandas to identify stocks with optimal risk and return (ex. standard deviation, beta, correlation, etc)
+- Generated sets of potential portfolio candidates based on statistical and graphical analysis
+
+**3. Portfolio Optimization**
+
+- Conducted Monte Carlo simulations to generate random weighting variations for portfolio candidates
+- Visualized 10,000 portfolio performances on a normalized risk-return plane
+- Identified final portfolio with the best risk-return tradeoff
+
+## Result 💫
+
+Given a random list of stock tickers, the portfolio roboadvisor generates a portfolio with select stocks and weights using 750,000 CAD that optimizes for risk and return. An example is shown below, which uses the `random_tickers.csv` file:
+
 <div>
 <table border="1" class="dataframe">
   <thead>
@@ -229,6 +250,8 @@ The final portfolio will look something like this:
 </table>
 </div>
 
+## Acknowledgments 📚
 
-If you're interested, more information and explanations can be found in the Jupyter Notebook file.
-
+- [Pandas](https://pandas.pydata.org/docs/): Data cleaning, preprocessing, manipulation, and analysis.
+- [Matplotlib](https://matplotlib.org/): Data visualization.
+- [yfinance](https://github.com/ranaroussi/yfinance/tree/main): API for historical stock data.
