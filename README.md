@@ -2,7 +2,7 @@
 
 This Python-based portfolio roboadvisor is designed to optimize a portfolio for risk-averse investors. It takes a CSV file containing a random list of stock tickers, processes the data, and generates a portfolio that balances risk and return using Monte Carlo simulations. For more details, feel free to explore the Jupyter Notebook.
 
-This project was entered into a portfolio generation competition and was tested against live stock data, and ranked third among competing groups. The generated portfolio can be found [here on Yahoo Finance](https://yhoo.it/3Z6Gvv2).
+This project was part of the CFM101 course offered by the University of Waterloo, and was entered into a portfolio generation competition and tested against live stock data, and ranked third among 20 competing groups. The generated portfolio can be found [here on Yahoo Finance](https://yhoo.it/3Z6Gvv2).
 
 ## Technologies 🥞
 
