@@ -1,16 +1,18 @@
-# Portfolio Roboadvisor
+# Portfolio Roboadvisor 🤖
 
-This Python-based portfolio roboadvisor is designed to optimize a portfolio for risk-averse investors. It takes a CSV file containing a random list of stock tickers, processes the data, and generates a portfolio that balances risk and return using Monte Carlo simulations. For more details, feel free to explore the Jupyter Notebook.
+This Python-based portfolio roboadvisor is designed to optimize a portfolio for risk-averse investors. It takes a CSV file containing a random list of stock tickers, fetches and processes historical financial data from the `Yahoo Finance API`, and generates a portfolio that balances risk and return using Monte Carlo simulations and financial measures. For more details, feel free to explore the Jupyter Notebook.
 
-This project was part of the CFM101 course offered by the University of Waterloo, and was entered into a portfolio generation competition and tested against live stock data, and ranked third among 20 competing groups. The generated portfolio can be found [here on Yahoo Finance](https://yhoo.it/3Z6Gvv2), which has achieved a 20% return YTD, as of September 2024.
+This project was part of the [CFM101 course](https://uwaterloo.ca/computing-financial-management/future-students/why-cfm) offered by the University of Waterloo, and was entered into a portfolio generation competition, where it was tested against live stock data, and ranked 3rd among 20 competing groups. The generated portfolio can be found [here on Yahoo Finance](https://yhoo.it/3Z6Gvv2), which has achieved a 27% return, as of February 2025.
 
-## Technologies 🥞
+## Tech Stack 🥞
 
-- Python (pandas, NumPy, Matplotlib)
-- Yahoo Finance API
-- Jupyter Notebook
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=plotly&logoColor=white)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter%20NoteBook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
-## Pipeline 🏭
+## Development 🏭
 
 **1. Data Preprocessing**
 
